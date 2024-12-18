@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let countdownValue;
 
     const falHafez = [
-        "سخن عشق تو بی‌آنکه برآید به زبانم",
+        "سخن عشق اهل بی‌آنکه برآید به زبانم",
         "در ازل پرتو حسنت ز تجلی دم زد",
         "دوست می‌دارم من این نالیدن دلسوز را",
         "به کوی عشق منه بی‌دلیل راه قدم",
@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startCountdown() {
         countdownValue = 3; // شروع شمارش از 3
-        falResult.textContent = `شمارش معکوس: ${countdownValue}`;
+        falResult.textContent = `  ${countdownValue}`;
 
         countdownTimer = setInterval(() => {
             countdownValue--;
-            falResult.textContent = `شمارش معکوس: ${countdownValue}`;
+            falResult.textContent = `  ${countdownValue}`;
 
             if (countdownValue === 0) {
                 clearInterval(countdownTimer);
