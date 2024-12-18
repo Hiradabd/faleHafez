@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const falButton = document.getElementById('falButton');
     const falResult = document.getElementById('falResult');
     let timer;
+    let countdownTimer;
+    let countdownValue;
 
     const falHafez = [
         "سخن عشق تو بی‌آنکه برآید به زبانم",
@@ -11,15 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
         "ای دل غلام شاه جهان باش و شاه باش"
     ];
 
+    function startCountdown() {
+        countdownValue = 3; // شروع شمارش از 3
+        falResult.textContent = `شمارش معکوس: ${countdownValue}`;
+
+        countdownTimer = setInterval(() => {
+            countdownValue--;
+            falResult.textContent = `شمارش معکوس: ${countdownValue}`;
+
+            if (countdownValue === 0) {
+                clearInterval(countdownTimer);
+                const randomFal = falHafez[Math.floor(Math.random() * falHafez.length)];
+                falResult.textContent = randomFal;
+            }
+        }, 1000); // هر یک ثانیه شمارش معکوس کاهش می‌یابد
+    }
+
     function startTimer() {
         timer = setTimeout(() => {
-            const randomFal = falHafez[Math.floor(Math.random() * falHafez.length)];
-            falResult.textContent = randomFal;
-        }, 5000);
+            startCountdown();
+        }, 0); // بلافاصله پس از فشردن دکمه شمارش شروع می‌شود
     }
 
     function stopTimer() {
         clearTimeout(timer);
+        clearInterval(countdownTimer);
+        falResult.textContent = "";
     }
 
     falButton.addEventListener('mousedown', startTimer);
