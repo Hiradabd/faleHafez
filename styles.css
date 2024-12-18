@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* تغییر کرده برای قرار دادن دکمه بالاتر */
+    height: 100vh;
+    background: linear-gradient(45deg, black, skyblue);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-top: 10%;  /* اضافه شده برای قرار دادن دکمه بالاتر */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#falButton {
+    padding: 20px 70px;  /* افزایش عرض دکمه */
+    font-size: 18px;     /* افزایش اندازه فونت */
+    color: white;
+    background-color: #007bff;
+    border: 3px solid #0056b3;  /* افزایش حاشیه */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#falButton:hover {
+    background-color: #0056b3;
+}
+
+#falButton:active {
+    background-color: #004080;
+}
+
+#falResult {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
