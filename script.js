@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const falButton = document.getElementById('falButton');
     const falResult = document.getElementById('falResult');
-    let timer;
     let countdownTimer;
     let countdownValue;
 
@@ -29,24 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000); // هر یک ثانیه شمارش معکوس کاهش می‌یابد
     }
 
-    function startTimer() {
-        timer = setTimeout(() => {
-            startCountdown();
-        }, 0); // بلافاصله پس از فشردن دکمه شمارش شروع می‌شود
-    }
-
-    function stopTimer() {
-        clearTimeout(timer);
-        clearInterval(countdownTimer);
-        falResult.textContent = "";
-    }
-
-    falButton.addEventListener('mousedown', startTimer);
-    falButton.addEventListener('mouseup', stopTimer);
-    falButton.addEventListener('mouseleave', stopTimer);
-
-    // رویدادهای لمسی برای سازگاری با موبایل
-    falButton.addEventListener('touchstart', startTimer);
-    falButton.addEventListener('touchend', stopTimer);
-    falButton.addEventListener('touchcancel', stopTimer);
+    falButton.addEventListener('click', startCountdown);
 });
