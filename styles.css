@@ -1,43 +1,71 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;  /* تغییر کرده برای قرار دادن دکمه بالاتر */
+    align-items: flex-start;
     height: 100vh;
-    background: linear-gradient(45deg, black, skyblue);
+    background: linear-gradient(45deg, #ff3e3e, #ff7f50); /* گرادیانت از قرمز به رنگ هندوانه‌ای */
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding-top: 10%;  /* اضافه شده برای قرار دادن دکمه بالاتر */
+    padding-top: 10%;
 }
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid #ffeb3b; /* حاشیه زرد برای حس و حال یلدایی */
 }
 
 #falButton {
-    padding: 20px 70px;  /* افزایش عرض دکمه */
-    font-size: 18px;     /* افزایش اندازه فونت */
+    padding: 20px 70px;
+    font-size: 20px;
     color: white;
-    background-color: #007bff;
-    border: 3px solid #0056b3;  /* افزایش حاشیه */
-    border-radius: 5px;
+    background-color: #d32f2f; /* رنگ قرمز برای دکمه */
+    border: 3px solid #ffeb3b; /* حاشیه زرد برای دکمه */
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #falButton:hover {
-    background-color: #0056b3;
+    background-color: #c2185b; /* رنگ قرمز تیره‌تر برای دکمه در حالت هاور */
+    transform: scale(1.05); /* بزرگ‌تر شدن دکمه در حالت هاور */
 }
 
 #falButton:active {
-    background-color: #004080;
+    background-color: #b71c1c; /* رنگ قرمز تیره‌تر برای دکمه در حالت فعال */
 }
 
 #falResult {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #d32f2f; /* حاشیه قرمز برای نتیجه فال */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#continueButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #388e3c; /* رنگ سبز برای دکمه ادامه */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#continueButton:hover {
+    background-color: #2e7d32; /* رنگ سبز تیره‌تر برای دکمه ادامه در حالت هاور */
+    transform: scale(1.05); /* بزرگ‌تر شدن دکمه در حالت هاور */
+}
+
+#continueButton:active {
+    background-color: #1b5e20; /* رنگ سبز تیره‌تر برای دکمه ادامه در حالت فعال */
 }
